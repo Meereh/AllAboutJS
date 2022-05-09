@@ -3,8 +3,11 @@
 X
 binaryNumber
 factorization
+TeacherMistake
 
 ??
 follower
 roman
+worldpatterngame
+wordtrain
  */
