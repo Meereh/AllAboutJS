@@ -42,3 +42,12 @@ function GCD(a, b)
     return GCD(b, a%b);
   }
 }
+
+
+//최대값/최소값
+var myArray = [1, 5, 6, 2, 3];
+var m = Math.min(...myArray);
+console.log(m)
+
+var m = Math.max.apply(null, myArray);
+console.log(m)

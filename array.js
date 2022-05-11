@@ -36,3 +36,26 @@ console.log(JSON.stringify(a1) === JSON.stringify(a2))
 
 // 방법 2
 console.log(a1.join('') === a2.join(''))
+
+
+
+//arr => set
+const arr = [1, 1, 3, 4, 5, 2]
+
+const set = new Set(arr)
+
+console.log(set);
+
+
+//set => arr
+let array1 = Array.from(set);
+console.log(array1);
+
+
+//reverse
+const array_1 = ['a', 'b', 'c', 'd'];
+console.log(array_1); // a, b, c, d
+
+const reverse1 = array_1.reverse();
+console.log(reverse1); // d, c, b, a
+console.log(array_1); // d, c, b, a

@@ -39,3 +39,14 @@ console.log(Number.parseFloat("1.25em")) //1.25
 console.log(Number.parseInt("1.25em")) //1
 console.log(Number.parseInt("t123"))  //NaN
 console.log(Number.parseInt("0f", 16))  //15
+
+
+
+//min/max 안쓰고 최대값/최소값 구하기
+max = Number.MIN_SAFE_INTEGER;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > max) {
+    max = arr[i];
+  }
+}
+
