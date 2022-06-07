@@ -19,7 +19,6 @@ function async(str){
     }, Math.random() * 1000)
 }
 
-//순서대로 작동 = 동기적
 async("냄비준비");
 async("물넣어 끓이기");
 async("라면/스프넣기");
@@ -35,15 +34,17 @@ async("먹기");
 
 console.log("callback=========")
 //1. callback 지옥
+//코드 보기 어려움.
 function async_callback(str, callback){
     setTimeout(function(){
         console.log(str);
+        //complete
         callback();
     }, Math.random() * 1000)
 }
 
 async_callback("냄비준비",function(){
-    async_callback("물넣어 끓이기", function (){
+    async_callback("물넣어 끓이기", function(){
         async_callback("라면/스프넣기", function(){
             async_callback("먹기", function(){
 
@@ -55,7 +56,7 @@ async_callback("냄비준비",function(){
 
 
 console.log("Promise/async/await=========")
-//1. allback 지옥
+//2.promise-async-await
 function async_promise(str){
     return new Promise(function(resolve, reject){
         setTimeout(function(){
@@ -66,7 +67,7 @@ function async_promise(str){
     })
 }
 
-
+//async가 붙은 함수안에서 await 키워드 붙여서 사용
 async function aa(){
     await async_promise("냄비준비");
     await async_promise("물넣어 끓이기");
@@ -77,3 +78,34 @@ async function aa(){
 aa();
 
 
+
+console.log("Promise/async/await22=========")
+//2-1.promise-async-await
+//꼭 resolve 함수가 async 함수 내에서 실행되어야 하는것은 아님.
+async function bb(){
+    //아래 Promise가 실행되어야 그 다음 줄 console.log 실행가능
+    let box = await new Promise(function(resolve, reject){
+        //resolve == 함수
+        //resolve함수에 매개변수 전달가능.
+        //box에는 resolve 함수안 매개변수가 전달.
+        resolve(123); //함수 벗어남.console P 출력가능
+        
+    })
+    console.log(box);
+    console.log("P")
+}
+
+
+/*
+async function bb(){
+    let promise = new Promise(function(resolve, reject){
+        resolve(); //함수 벗어남.console P 출력가능
+    })
+
+    console.log(1);
+    let box = await promise;
+    console.log(2);
+}
+ */
+
+bb();
