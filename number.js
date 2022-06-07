@@ -41,12 +41,29 @@ console.log(Number.parseInt("t123"))  //NaN
 console.log(Number.parseInt("0f", 16))  //15
 
 
-
+var myArray = [1, 5, 6, 2, 3];
 //min/max 안쓰고 최대값/최소값 구하기
 max = Number.MIN_SAFE_INTEGER;
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] > max) {
-    max = arr[i];
+for (let i = 0; i < myArray.length; i++) {
+  if (myArray[i] > max) {
+    max = myArray[i];
   }
 }
+
+
+
+let point = 3.2453;
+
+//올림
+let n1 = Math.ceil(point);
+
+//내림
+let n2 = Math.floor(point);
+
+//반올림
+let n3= Math.round(point);
+
+
+let nj = Math.abs(-3);
+
 

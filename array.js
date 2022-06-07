@@ -59,3 +59,58 @@ console.log(array_1); // a, b, c, d
 const reverse1 = array_1.reverse();
 console.log(reverse1); // d, c, b, a
 console.log(array_1); // d, c, b, a
+
+
+//slice()
+//begin부터 end 전까지의 복사본을 새로운 배열 객체로 반환한다. 즉, 원본 배열은 수정되지 않는다.
+
+//start
+//undefined인 경우: 0부터 slice
+//음수를 지정한 경우: 배열의 끝에서부터의 길이를 나타낸다. slice(-2)를 하면 배열의 마지막 2개의 요소를 추출한다.
+
+//end
+//지정하지 않을 경우: 배열의 끝까지 slice
+//음수를 지정한 경우: 배열의 끝에서부터의 길이를 나타낸다. slice(2, -1)를 하면 세번째부터 끝에서 두번째 요소까지 추출
+
+var arr11 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+
+var arr1 = arr11.slice(3, 5);			// [4, 5]
+var arr2 = arr11.slice(undefined, 5);		// [1, 2, 3, 4, 5]
+var arr3 = arr11.slice(-3);			// [8, 9, 10]
+var arr4 = arr11.slice(-3, 9);			// [8, 9]
+var arr5 = arr11.slice(10);			// []
+var arr6 = arr11.slice(4);			// [5, 6, 7, 8, 9, 10]
+var arr7 = arr11.slice(undefined);		// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+var arr8 = arr11.slice(5, -4);			// [6]
+var arr9 = arr11.slice(2, 15);			// [3, 4, 5, 6, 7, 8, 9, 10]
+
+
+//splice()
+// 배열의 기존 요소를 삭제 또는 교체하거나 새 요소를 추가하여 배열의 내용을 변경한다. 이 메소드는 원본 배열 자체를 수정한다.
+
+//start
+//음수를 지정한 경우: 배열의 끝에서부터 요소를 센다.
+
+var arr12 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; 
+
+var arr13 = arr.splice(10, 2, 'a', 'b', 'c'); 
+console.log(arr12);   // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "a", "b", "c"]
+console.log(arr13);  // [11, 12]
+
+
+
+//배열속 원하는 값찾기
+var a = [1,2,3,4,5,1,2,3]
+
+a.indexOf(3)
+//2
+
+a.indexOf(6)
+//-1
+
+
+a.includes(3)
+//true
+
+a.includes(6)
+//false

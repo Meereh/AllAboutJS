@@ -51,3 +51,23 @@ console.log(m)
 
 var m = Math.max.apply(null, myArray);
 console.log(m)
+
+let min = Number.MAX_SAFE_INTEGER;
+for(let i =0; i<myArray.length; i++){
+    if(min> myArray[i])
+    min = myArray[i];
+}
+
+
+//등차수열/등비수열
+//s: 초기값, t: 간격, number: 횟수
+
+function recursive(s, t, number){
+    if(number===1){
+        return s;
+    }else{
+        return recursive(s, t, number-1) + t;
+    }
+}
+
+
