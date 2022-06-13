@@ -1,26 +1,5 @@
-const N = 2;
-const K = 2;
-const sit =[];
-const out = [];
+let dish_index = 0;
+for(i =0 ;i<3;i++){
+    console.log(dish_index++)
 
-for(let i =0; i<N; i++){
-    sit.push(i+1);
 }
-
-if(N===2){
-    if(K===1){
-        console.log(2) ;
-    }
-    else{
-        console.log(1) ;
-    }
-}else {
-    while(sit.length >K-1){
-        for(let i =0; i<K-1;i++){
-            sit.push(sit.shift());
-        }
-        out.push(sit.shift());
-    }
-}
-//console.log(sit)
-//console.log(sit.pop())

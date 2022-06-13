@@ -133,3 +133,18 @@ result = oneTwoThree.reduceRight((acc, cur, i) => {
     return acc;
   }, []);
   result; // [1, 3]
+
+
+
+//findIndex
+  var languageSubject = [
+    {name: 'Java',  grade: 'A'},
+    {name: 'React', grade: 'B'},
+    {name: 'Node',  grade: 'C'},
+    {name: 'C',     grade: 'D'}
+];
+
+var returnIndex = languageSubject.findIndex(function(data){ return data.name === 'Node'});
+
+console.log(returnIndex);
+// 2

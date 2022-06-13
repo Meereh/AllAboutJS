@@ -2,6 +2,10 @@
 const array = ['C', 'A', 'B', 'A', 'C', 'D', 'C', 'C', 'E', 'D'];
 console.log(array);	// ['C', 'A', 'B', 'A', 'C', 'D', 'C', 'C', 'E', 'D']
 
+
+//indexOf
+console.log(array.indexOf("B")); //2
+
 let result1 = [...new Set(array)];
 console.log(result1);	// ['C', 'A', 'B', 'D', 'E']
 
@@ -114,3 +118,47 @@ a.includes(3)
 
 a.includes(6)
 //false
+
+
+
+
+//map
+var sayings = new Map();
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
+sayings.size; // 3
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+
+for (var [key, value] of sayings) {
+  console.log(key + " goes " + value);
+}
+// "cat goes meow"
+// "elephant goes toot"
+
+
+
+let answer ={}; //key ,value
+
+
+//배열 10개 0으로 초기화
+let result = new Array(10).fill(0);
+
+
+//배열 안의 값 모두 찾기 (index)
+const arrayy = [5, 6, 9, 1, 6, 3, 2, 1, 2, 7, 9, 4, 3];
+
+const search = 9;
+const searchResult = [];
+let index = arrayy.indexOf(search);
+while (index != -1) {
+    searchResult.push(index);
+    index = arrayy.indexOf(search, index + 1);
+}
+
+console.log(searchResult);
+
+
+// ->unshift <- shift ======= ->pop <-push
