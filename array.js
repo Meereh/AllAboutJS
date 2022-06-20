@@ -162,3 +162,10 @@ console.log(searchResult);
 
 
 // ->unshift <- shift ======= ->pop <-push
+
+
+//배열 내 같은 요소 제거하기
+//set
+const names = ['Lee', 'Kim', 'Park', 'Lee', 'Kim'];
+const uniqueNamesWithArrayFrom = Array.from(new Set(names));
+const uniqueNamesWithSpread = [...new Set(names)];
