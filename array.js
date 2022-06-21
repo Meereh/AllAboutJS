@@ -162,3 +162,21 @@ console.log(searchResult);
 
 
 // ->unshift <- shift ======= ->pop <-push
+
+
+//차집합
+//a b 중 a에만 해당하는것
+let arrA = [1, 2, 3];
+let arrB = [2, 3, 4, 5];
+
+let difference = arrA.filter(x => !arrB.includes(x)); // 결과 1
+
+//교집합
+//A, B 공통으로 가지고 있는 것
+let difference1 = arr1.filter(x => arr2.includes(x)); // 결과 2, 3
+
+//배타적 논리합
+//A, B 공통적인거 빼고, A에만 있는거 + B에만 있는거
+let difference2 = arr1
+                 .filter(x => !arr2.includes(x))
+                 .concat(arr2.filter(x => !arr1.includes(x))); // 결과 1, 4, 5
