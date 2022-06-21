@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 숫자 카드 */
 
 /* user code */
@@ -37,3 +38,12 @@ for (let i = 0; i < input.length; i++) {
   process.stdout.write(`#${i + 1} `);
   console.log(answer(input[i][0], input[i][1]));
 }
+=======
+const number = [1,2,3,4,5];
+
+number.map((ele, idx, source)=>{
+    console.log(ele);
+    console.log(idx);
+    console.log(source);
+})
+>>>>>>> 9cfee61f39e773649b655e4e9132221e8aad021b

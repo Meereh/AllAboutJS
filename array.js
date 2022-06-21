@@ -164,6 +164,7 @@ console.log(searchResult);
 // ->unshift <- shift ======= ->pop <-push
 
 
+<<<<<<< HEAD
 //차집합
 //a b 중 a에만 해당하는것
 let arrA = [1, 2, 3];
@@ -180,3 +181,10 @@ let difference1 = arr1.filter(x => arr2.includes(x)); // 결과 2, 3
 let difference2 = arr1
                  .filter(x => !arr2.includes(x))
                  .concat(arr2.filter(x => !arr1.includes(x))); // 결과 1, 4, 5
+=======
+//배열 내 같은 요소 제거하기
+//set
+const names = ['Lee', 'Kim', 'Park', 'Lee', 'Kim'];
+const uniqueNamesWithArrayFrom = Array.from(new Set(names));
+const uniqueNamesWithSpread = [...new Set(names)];
+>>>>>>> 9cfee61f39e773649b655e4e9132221e8aad021b
