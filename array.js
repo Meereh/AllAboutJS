@@ -169,3 +169,8 @@ console.log(searchResult);
 const names = ['Lee', 'Kim', 'Park', 'Lee', 'Kim'];
 const uniqueNamesWithArrayFrom = Array.from(new Set(names));
 const uniqueNamesWithSpread = [...new Set(names)];
+
+
+//matrix
+// arr[5][2] (null로 초기화하여 생성)
+const arr2 = Array.from(Array(5), () => Array(2).fill(null))

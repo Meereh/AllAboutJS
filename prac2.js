@@ -1,12 +1,9 @@
-let arr =[];
-for(let i = 2;  i<2+8;i++){
-    if(i < 3){
-        arr.push(i)
-    }else if (i>8){
-        let num = i%8;
-         arr.push(num)
-        //console.log(i%8)
-    }
-   
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+
+let n = matrix.length;
+let m = ([] ||matirx[0]).length
+let order = [];
+
+while(order.length != n*m){
+    
 }
-console.log(arr)
