@@ -102,3 +102,10 @@ console.log(result)     ////['h','e','l']
 console.log(result.length)   //3
 
 
+//숫자만 추출
+let strnum = "abcdislE GIWJ123GKDEE443f";
+strnum = strnum.replace(/[a-z]/gi,"")
+
+
+//문자만추출
+strnum = strnum.replace(/[1-9]/g,"")
