@@ -192,3 +192,15 @@ const uniqueNamesWithSpread = [...new Set(names)];
 // arr[5][2] (null로 초기화하여 생성)
 const arr2 = Array.from(Array(5), () => Array(2).fill(null))
 
+
+//Array.from 은 유사 배열 객체를 배열로 바꾸는데 자주 사용
+Array.from('Tei');
+//["T", "e", "i"]
+
+
+Array.from([1, 2, 3], x => x + x);
+//[2, 4, 6]
+
+
+//n+1 배열 개수만큼. 0 초기화
+let dy=Array.from({length:n+1}, ()=>0);
